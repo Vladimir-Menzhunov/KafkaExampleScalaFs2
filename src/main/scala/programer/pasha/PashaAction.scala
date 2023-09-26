@@ -14,7 +14,7 @@ object PashaAction extends IOApp.Simple with KafkaLogger {
 
   override def run: IO[Unit] = {
     val resume =
-      Resume(keyPartition, "Паша, просто гениален!", workExperienceYears = 3)
+      Resume(keyPartition, "Паша просто гениален!", workExperienceYears = 3)
     val producer = Producer.mk(
       ProducerConfig[Resume](
         keyPartition,
